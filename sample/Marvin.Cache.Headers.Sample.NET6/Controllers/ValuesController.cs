@@ -23,13 +23,18 @@ namespace Marvin.Cache.Headers.Sample.NET6.Controllers
             return _dataService.Persons;
         }
 
+        [HttpGet("TestGet")]
+        public IEnumerable<Person> GetAllPersons()
+        {
+            return _dataService.Persons;
+        }
         // GET api/values/5
         [HttpGet("{id}")]
         [HttpCacheExpiration(CacheLocation = CacheLocation.Private, MaxAge = 1337)]
         [HttpCacheValidation]
         public Person Get(int id)
         {
-            return _dataService.Persons[id];
+            return _dataService.Persons.Find(x=>x.Id == id);
         }
 
         // POST api/values

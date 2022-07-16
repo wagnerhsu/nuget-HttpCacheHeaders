@@ -1,0 +1,11 @@
+@url = 	http://localhost:5246
+
+GET {{url}}/api/values/testget
+
+###
+
+GET {{url}}/api/values
+
+###
+
+GET {{url}}/api/values/1

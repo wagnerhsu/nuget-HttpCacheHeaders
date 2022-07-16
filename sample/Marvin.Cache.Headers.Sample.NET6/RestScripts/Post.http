@@ -1,0 +1,9 @@
+@url = 	http://localhost:5246
+
+POST {{url}}/api/values
+Content-Type: application/json
+
+{
+    "Id": 1,
+    "Name":"Wagner"
+}
